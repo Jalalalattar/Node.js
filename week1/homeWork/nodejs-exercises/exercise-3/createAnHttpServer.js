@@ -23,7 +23,7 @@ let server = http.createServer(function(req, res) {
     res.setHeader('Content-type', 'text/html;charest=utf8')
     
     if ( req.url === '/script.js' ) {
-        res.setHeader('Content-type', 'text/javascript')
+        res.setHeader('Content-type', 'application/javascript')
         res.write(fs.readFileSync(path1));
 //5
        } else if( req.url === '/style.css' ){
