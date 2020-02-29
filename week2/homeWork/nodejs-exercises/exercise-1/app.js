@@ -12,7 +12,7 @@ app.post('/blogs', (req, res) => {
   const title = req.body.title;
   const content = req.body.content;
   fs.writeFileSync(title, content);
-  res.end('ok')
+  res.end('OK')
 })
 
 // UPDATE
@@ -39,7 +39,7 @@ app.delete('/blogs/:title', (req, res) => {
 app.get('/blogs/:title', (req, res) => {
   const title = req.params.title;
   res.sendfile(title);
-  res.end('blabla');
+  res.end('OK');
 }) 
 
 app.listen(port, ()=> console.log(`Connect OK ${port}`));

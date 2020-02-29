@@ -4,7 +4,7 @@ var http = require('http');
 let fs = require('fs'); // fs === 'fileSystem'
 let path1 = 'script.js'
 let path2 = 'style.css'
-let part = 3000;
+let port = 3000;
  
 /*
 // 1-2-3
@@ -47,4 +47,4 @@ let server = http.createServer(function(req, res) {
     res.end(); //end the response
 });
 
-server.listen(part, ()=> console.log(`Connect OK ${part}`) ); //the server listens on port 3000
+server.listen(port, ()=> console.log(`Connect OK ${port}`) ); //the server listens on port 3000
