@@ -20,8 +20,6 @@ let server = http.createServer(function(req, res) {
 
 //4
 let server = http.createServer(function(req, res) {
-    res.setHeader('Content-type', 'text/html;charest=utf8')
-    
     if ( req.url === '/script.js' ) {
         res.setHeader('Content-type', 'application/javascript')
         res.write(fs.readFileSync(path1));
@@ -30,6 +28,7 @@ let server = http.createServer(function(req, res) {
         res.setHeader('Content-type', 'text/css')
         res.write(fs.readFileSync(path2));
        } else {
+        res.setHeader('Content-type', 'text/html;charest=utf8')
         res.write(`
         <html>
             <head>
