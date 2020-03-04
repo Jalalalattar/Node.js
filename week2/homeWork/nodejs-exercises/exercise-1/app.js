@@ -38,8 +38,12 @@ app.delete('/blogs/:title', (req, res) => {
 // READ
 app.get('/blogs/:title', (req, res) => {
   const title = req.params.title;
-  res.sendfile(title);
-  res.end('OK');
-}) 
+  res.sendFile(title, {
+    root: __dirname,
+    headers: {
+      'Content-Type': 'text/plain'
+    }
+  });
+})
 
-app.listen(port, ()=> console.log(`Connect OK ${port}`));
+app.listen(port, () => console.log(`Connect OK ${port}`));

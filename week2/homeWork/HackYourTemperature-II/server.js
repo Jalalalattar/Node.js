@@ -14,7 +14,6 @@ app.use(express.urlencoded({extended: true}));
 //3
 app.post('/weather', (req,res) =>{
     const nameOfCity = req.body.cityName
-//    app.send(nameOfCity)
     res.render('index',{cityName : nameOfCity})
 });
 
