@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        form,p {
+            display: flex;
+            justify-content: center;
+        }
+
+        input {
+            box-sizing: border-box;
+            outline: none;
+            width: 40%;
+            padding: 7px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+            background: transparent;
+            font: 16px Arial, Helvetica, sans-serif;
+            height: 45px;
+            color: rgb(185, 49, 49);
+        }
+
+        ::placeholder {
+            color: lightgray
+        }
+
+        button {
+            background-color: #2CBBBB;
+            border: 1px solid #27A0A0;
+            color: #FFFFFF;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size: 14px;
+            padding: 8px 18px;
+            text-transform: uppercase;
+            border-radius: 10%;
+        }
+
+        button:hover {
+            background: linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+            background-color: #34CACA;
+        }
+        .err{
+            color: red;
+        }
+        .degrees{
+            color: blue;
+            /* My daughter asked me that the color be blue */ 
+        }
+    </style>
+    <title>Main handlebars</title>
+</head>
+
+<body>
+    {{{body}}}
+</body>
+
+</html>
