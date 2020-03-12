@@ -25,8 +25,8 @@ app.post('/weather', (req, res) => {
             return res.data
         })
         .then(json => {
-            const fahrenheit = (json.main.temp - 273).toFixed()
-            const degreesFahrenheit = `The temperature in ${json.name} is ${fahrenheit} ℉`
+            const Celsius = (json.main.temp)
+            const degreesFahrenheit = `The temperature in ${json.name} is ${Celsius} °C`
             res.render('index', { degreesFahrenheit })
         })
         .catch(err => {
